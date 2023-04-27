@@ -6,18 +6,19 @@ body{
   height: 200vh; /*must be used to make functional the justify-content declaration to force the page take the 100% of the screen's height*/
   justify-content: space-between;
   
+  
   background-color: #325454;
   
   border: 0px dashed red;
 }
 
 /*.content_i,*/
-
 .content_ii,
 .content_iii,
 .content_iv{
   flex-grow: 1;
-  font-family: arial
+  font-family: Ubuntu, arial;
+  overflow: hidden;
 }
 
 
@@ -25,6 +26,8 @@ body{
   display: flex;
   flex-direction: column;
   background-color:#1f2937;
+  align-items: center;
+  overflow: hidden;
   
 }
 
@@ -32,9 +35,11 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
+  min-width: 700px;
   color: white;
   height: 3rem;
-  padding: 0 15%;
+  padding: 0;
   
   border: 0px dashed #8f8eba;
 }
@@ -64,12 +69,25 @@ a{
 
 .subcontent{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  /*overflow: hidden;*/
+
+  border: 0px dashed #a7de24;
+}
+
+.inner{
+  display: flex;
+  min-width: 700px;
   align-items: stretch;
   gap: 1.5rem;  
   color: white;
-  padding: 10% 15%;
+  height: auto;
+  width: 80%;
   overflow-wrap: break-word;
+  overflow: hidden;
+  margin: 4rem 0;
     
   border: 0px dashed #b90098;
 }
@@ -126,8 +144,12 @@ img{
   height: 100%;
   width:  100%;
   object-fit: cover;
-  
+    
   border: 0px dashed #FF5722; 
+}
+
+.main{
+  
 }
 
 .content_ii{
@@ -154,30 +176,49 @@ img{
   gap: 3rem;
   justify-content: center;
   flex-grow: 1;
-  padding: 1rem 0;
+  padding: 1rem 10rem;
       
   border: 0px dashed #fff907;
 }
 
 .img_sub{
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  width: 200px;
+  width: 250px;
+  align-items: center;
    
   border: 0px dashed #734627;
 }
 
 .image_i{
-  display: flex;
-  height: 200px;
-    
-  border-radius: .6rem; /*polish image corners and shrink*/
-  border: 6px solid #2196F3;
+  border-radius: 10px; /*polish image corners and shrink*/
+  background: linear-gradient(45deg, #2196F3,#2311b4,#2196F3);
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  
+}
+
+.image_ii{
+  border-radius: calc(20px - 10px);
+  background: #fff;
+  margin: 0;
+  height: 250px;
+}
+
+.mos{  
+  border-radius: 10px;
+  width: 250px;
+
+  border: 0px solid #2eca15;
 }
 
 .text_ii{
   text-align:center;
   color: #59595a;
   margin-top: .5rem;
+  
 
   border: 0px solid #2eca15;
 }
@@ -231,6 +272,7 @@ img{
   padding: 2rem;
   flex-grow: 1;
   max-height: 3rem;
+  min-width: 400px;
 }
 
 .text_v{
@@ -240,6 +282,7 @@ img{
 
 .button_ii{
    border: 2px solid white;
+   min-width: 80px;
 }
 
 .footer{
